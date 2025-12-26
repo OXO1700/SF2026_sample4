@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>文化祭公式サイト</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+  <div id="bgOverlay" class="bg-overlay" aria-hidden="true"></div>
+
+  <noscript class="no-js-warning">JavaScript が無効になっているため、サイトの一部コンテンツが表示されません。ブラウザの設定で JavaScript を有効にするか、ローカルサーバーで確認してください。</noscript>
+
+<header class="site-header">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="top-left">文化祭 2026 — 11/03</div>
+      <div class="top-right">
+        <a href="https://www.instagram.com/your_account" target="_blank" rel="noopener" class="top-social">Instagram</a>
+        <a href="assets/map.pdf" download class="top-cta">校内マップ</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-inner">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="文化祭ロゴ" class="logo" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <h1 class="brand-title">文化祭2025 公式サイト</h1>
+        <p class="brand-sub">学生が作る、地域とつながる2日間のフェスティバル</p>
+      </div>
+    </div>
+
+    <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+
+    <nav id="mainNav" class="nav">
+      <a href="index.html">ホーム</a>
+      <a href="projects.html">企画紹介</a>
+      <a href="timetable.html">タイムテーブル</a>
+      <a href="info.html">インフォ</a>
+      <a href="blog.html">ブログ</a>
+      
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero card">
+    <div class="hero-inner">
+      <div>
+        <h2 class="hero-title">文化祭まで</h2>
+        <p id="countdown" class="hero-countdown" aria-live="polite"></p>
+        <p class="hero-sub">2025年10月20日 9:00 開始予定</p>
+        <a href="projects.html" class="button">企画を見る</a>
+      </div>
+      <div class="hero-illustration" aria-hidden="true"></div>
+    </div>
+  </section>
+  
+  <section class="card" style="margin-top:0.6rem; display:flex; align-items:center; gap:1rem; flex-direction:column; text-align:center;">
+    <div style="max-width:900px;">
+      <h2 style="margin:0 0 0.4rem; font-size:1.6rem;">ようこそ！文化祭のワクワク体験を探そう</h2>
+      <p class="muted" style="margin:0 0 0.8rem;">今年は舞台・展示・模擬店など、多彩な企画が目白押しです。気になる企画はカテゴリで絞り込んで、当日は会場をめぐる冒険に出かけましょう！</p>
+      <div style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;">
+        <a href="projects.html#projectsGrid" class="button">注目企画を見る</a>
+        <a href="timetable.html" class="button" style="background:var(--accent);">タイムテーブルを見る</a>
+        <a href="info.html" class="button" style="background:linear-gradient(90deg,var(--accent),var(--main));">参加方法を確認</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="contentArea">
+    <section class="card">
+      <h2>注目のプログラム</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:0.8rem;">
+        <article class="post-card">
+          <h3>サイエンスショー（科学部）</h3>
+          <p class="muted">大きな反応と小さな化学の驚きを体験できるステージ。親子で楽しめます。</p>
+          <a href="projects.html#" class="button">詳しく見る</a>
+        </article>
+        <article class="post-card">
+          <h3>お菓子カフェ（家庭科）</h3>
+          <p class="muted">手作りスイーツの限定メニュー。すぐに売り切れる人気企画です。</p>
+          <a href="projects.html#" class="button">詳しく見る</a>
+        </article>
+        <article class="post-card">
+          <h3>フォト展示（写真部）</h3>
+          <p class="muted">1年間の活動の集大成を展示。作品の裏話も楽しめます。</p>
+          <a href="projects.html#" class="button">詳しく見る</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>来場のヒント</h2>
+      <ul style="margin-top:0.6rem;color:var(--muted);">
+        <li>人気企画は早めに満席になることがあるので、午前中の来場がおすすめです。</li>
+        <li>会場内は混雑します。お子様連れの方は集合場所を事前に決めておきましょう。</li>
+        <li>スタンプラリーやワークショップは材料がなくなり次第終了です。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>最新のお知らせ（ブログ）</h2>
+      <div class="blog-list" style="margin-top:0.6rem;">
+        <article class="post-card">
+          <h3>実行委員からのお知らせ：当日の集合場所について</h3>
+          <p class="muted">当日は正門前が集合場所になります。開場時間は9:00です。係の指示に従ってください。</p>
+          <a href="blog/sample-post.html" class="button">続きを読む</a>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- ページ内でヒーロー日付などを script.js に渡す（fetch を待たずにカウントダウンが動きます） -->
+  <script>
+    window.__heroDate = '2026-11-03T09:00:00';
+    window.__heroTitle = '文化祭まで';
+    window.__heroSubtitle = '2026年11月03日 9:00 開始予定';
+    window.__heroCta = { text: '企画を見る', url: 'projects.html' };
+  </script>
+
+  <!-- コンテンツは CSV により管理します -->
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© <span id="currentYear"></span> 文化祭実行委員会</p>
+    <nav class="footer-nav">
+      <a href="projects.html">企画紹介</a>
+      <a href="timetable.html">タイムテーブル</a>
+      <a href="assets/map.pdf" download>校内マップ</a>
+    </nav>
+    <div id="footerSocial" class="footer-social" aria-hidden="false">
+      <a href="https://www.instagram.com/your_account" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="currentColor"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="white" opacity="0.95"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="white" opacity="0.95"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
